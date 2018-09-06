@@ -7,6 +7,13 @@
 //
 
 import Foundation
+import CocoaLumberjack
 
-print("Hello, World!")
+// Set up logging
+DDLog.add(DDTTYLogger.sharedInstance)
+DDLogInfo("blah")
 
+
+
+let chapter1 = Chapter1()
+chapter1.run()

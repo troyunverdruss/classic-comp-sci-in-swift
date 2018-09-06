@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0507F6BF213F5EF7000F70A9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507F6BE213F5EF7000F70A9 /* main.swift */; };
+		0507F6C6213F5F0C000F70A9 /* chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507F6C5213F5F0C000F70A9 /* chapter1.swift */; };
+		4A0EB22FAEFBA34D0FF196DF /* Pods_Classic_Computer_Science_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE18AD486C3D5D3DF03DC85 /* Pods_Classic_Computer_Science_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		0507F6BB213F5EF7000F70A9 /* Classic Computer Science Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Classic Computer Science Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0507F6BE213F5EF7000F70A9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0507F6C5213F5F0C000F70A9 /* chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chapter1.swift; sourceTree = "<group>"; };
+		0D0CC0DB4AA6255489ABC63D /* Pods-Classic Computer Science Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Classic Computer Science Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Classic Computer Science Swift/Pods-Classic Computer Science Swift.release.xcconfig"; sourceTree = "<group>"; };
+		1AE18AD486C3D5D3DF03DC85 /* Pods_Classic_Computer_Science_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Classic_Computer_Science_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		846F703B90A3C66D03BA587B /* Pods-Classic Computer Science Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Classic Computer Science Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Classic Computer Science Swift/Pods-Classic Computer Science Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0EB22FAEFBA34D0FF196DF /* Pods_Classic_Computer_Science_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +50,8 @@
 			children = (
 				0507F6BD213F5EF7000F70A9 /* Classic Computer Science Swift */,
 				0507F6BC213F5EF7000F70A9 /* Products */,
+				F4D32DDF57A9406BEF127D12 /* Pods */,
+				3985F20A4D6689437C560C27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +67,26 @@
 			isa = PBXGroup;
 			children = (
 				0507F6BE213F5EF7000F70A9 /* main.swift */,
+				0507F6C5213F5F0C000F70A9 /* chapter1.swift */,
 			);
 			path = "Classic Computer Science Swift";
+			sourceTree = "<group>";
+		};
+		3985F20A4D6689437C560C27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AE18AD486C3D5D3DF03DC85 /* Pods_Classic_Computer_Science_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4D32DDF57A9406BEF127D12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				846F703B90A3C66D03BA587B /* Pods-Classic Computer Science Swift.debug.xcconfig */,
+				0D0CC0DB4AA6255489ABC63D /* Pods-Classic Computer Science Swift.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0507F6C2213F5EF7000F70A9 /* Build configuration list for PBXNativeTarget "Classic Computer Science Swift" */;
 			buildPhases = (
+				11F4BB0ABA4C8F389499D6A4 /* [CP] Check Pods Manifest.lock */,
 				0507F6B7213F5EF7000F70A9 /* Sources */,
 				0507F6B8213F5EF7000F70A9 /* Frameworks */,
 				0507F6B9213F5EF7000F70A9 /* CopyFiles */,
@@ -114,12 +142,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11F4BB0ABA4C8F389499D6A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Classic Computer Science Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0507F6B7213F5EF7000F70A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0507F6BF213F5EF7000F70A9 /* main.swift in Sources */,
+				0507F6C6213F5F0C000F70A9 /* chapter1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +295,7 @@
 		};
 		0507F6C3213F5EF7000F70A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846F703B90A3C66D03BA587B /* Pods-Classic Computer Science Swift.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -250,6 +305,7 @@
 		};
 		0507F6C4213F5EF7000F70A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D0CC0DB4AA6255489ABC63D /* Pods-Classic Computer Science Swift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";

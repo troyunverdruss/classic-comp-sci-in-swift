@@ -7,8 +7,14 @@
 //
 
 import Foundation
+//import CocoaLumberjack
 
 class Chapter1 {
+    func run() -> Void {
+        let v1 = fib1(n: 2)
+//        DDLogInfo("fib1: \(v1)")
+    }
+
     func fib1(n: UInt) -> UInt {
         if (n < 2) {
             return n
@@ -16,5 +22,7 @@ class Chapter1 {
         return fib1(n: n - 1) + fib1(n: n-2)
     }
     
-    func fib2()
+    func fib2() {
+        
+    }
 }
