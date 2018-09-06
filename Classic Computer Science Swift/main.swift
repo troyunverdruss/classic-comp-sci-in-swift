@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import CocoaLumberjack
+//import CocoaLumberjack
 
 // Set up logging
-DDLog.add(DDTTYLogger.sharedInstance)
-DDLogInfo("blah")
+//DDLog.add(DDTTYLogger.sharedInstance)
+//DDLogInfo("blah")
 
 
 
